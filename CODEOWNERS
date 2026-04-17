@@ -1,0 +1,9 @@
+# CODEOWNERS par défaut pour PROJECT-M&M
+# Ce fichier définit qui review automatiquement les PR selon les fichiers modifiés.
+# Les owners sont auto-assignés en reviewers quand une PR touche leurs fichiers.
+#
+# Syntaxe : <pattern> <owner1> <owner2>
+# Docs : https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Par défaut, les deux reviewent tout
+*       @AndreolleManuel @michael92350

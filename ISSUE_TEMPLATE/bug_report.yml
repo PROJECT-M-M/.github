@@ -1,0 +1,63 @@
+name: 🐛 Bug report
+description: Signaler un bug / comportement incorrect
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de remplir ce formulaire. Plus tu donnes de contexte, plus vite on peut reproduire et fixer.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Que s'est-il passé ?
+      description: Décris le comportement observé vs. attendu.
+      placeholder: "Quand je fais X, j'obtiens Y. Je m'attendais à Z."
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Étapes pour reproduire
+      description: Liste les étapes précises.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / stacktrace
+      description: Colle ici les logs pertinents (auto-formaté en shell)
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Branche, commit SHA ou tag
+      placeholder: main @ a1b2c3d
+
+  - type: dropdown
+    id: env
+    attributes:
+      label: Environnement
+      options:
+        - Local dev
+        - Staging
+        - Production
+        - CI
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS / navigateur / runtime
+      placeholder: macOS 14 / Chrome 120 / Node 20
